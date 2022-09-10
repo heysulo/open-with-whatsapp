@@ -1169,9 +1169,7 @@ app.controller('HomePageController', function ($http) {
     ];
     this.selectedCountry = this.countryCodes[0];
     this.target = ''
-    $http.get('http://ip-api.com/json').then((response)=> {
-        this.selectedCountry = this.countryCodes.find((c) => c.isoCode === response.data.countryCode.toLowerCase())
-    })
+    this.selectedCountry = this.countryCodes.find((c) => c.isoCode === country.toLowerCase())
 
     this.getSelectOptionLabel = (country) => {
         return `${country.name} (+${country.dialCode})`

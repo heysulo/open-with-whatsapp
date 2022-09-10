@@ -7,6 +7,10 @@ exports.operational = {
     domain: 'heysulo.local'
 };
 
+exports.ipinfo = {
+    token: ''
+}
+
 exports.logging = {
     logLevelFile: 0,
     developmentMode: !exports.operational.production,
