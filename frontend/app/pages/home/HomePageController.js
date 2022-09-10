@@ -1169,6 +1169,7 @@ app.controller('HomePageController', function ($http) {
     ];
     this.selectedCountry = this.countryCodes[0];
     this.target = ''
+    this.visitCount = visitCount;
     this.selectedCountry = this.countryCodes.find((c) => c.isoCode === country.toLowerCase())
 
     this.getSelectOptionLabel = (country) => {
@@ -1176,6 +1177,9 @@ app.controller('HomePageController', function ($http) {
     }
 
     this.open = () => {
+        if (this.target.length === 0) {
+            return
+        }
         window.location = `https://wa.me/${this.selectedCountry.dialCode}${this.target}`;
     }
 });
