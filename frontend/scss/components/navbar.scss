@@ -1,0 +1,19 @@
+@import "../theme";
+.navbar {
+  background-color: $whatsapp-green-primary;
+  min-height: 90px;
+  margin: 0 0 20px 0;
+
+  .wa-logo {
+    max-height: 45px;
+    max-width: 45px;
+  }
+
+  h3.title {
+    font-weight: 700;
+    font-size: 26px;
+    font-family: Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: $whatsapp-white;
+    margin: 0 10px;
+  }
+}

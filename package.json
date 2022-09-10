@@ -1,0 +1,30 @@
+{
+  "name": "open-with-whatsapp",
+  "version": "1.0.0",
+  "description": "A web system to open phone numbers from WhatsApp without actually saving them to your phone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "WhatsApp",
+    "open in whatsapp",
+    "phone number"
+  ],
+  "author": "SulochanaK",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.7",
+    "express": "^4.18.1",
+    "perfect-logger": "^2.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sequence": "^1.0.0",
+    "gulp-watch": "^5.0.1",
+    "sass": "^1.52.1"
+  }
+}

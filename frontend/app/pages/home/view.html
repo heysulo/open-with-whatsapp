@@ -1,0 +1,40 @@
+<div class="container home">
+    <div class="row">
+        <div class="intro">
+            <h1>Open with WhatsApp</h1>
+            <p>You can open a chat on WhatsApp without saving the number as a contact in your phone</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="input-section">
+                <select ng-model="ctrlHome.selectedCountry"
+                        ng-options="ctrlHome.getSelectOptionLabel(country) for country in ctrlHome.countryCodes"
+                        id="countryCodeSelector"
+                >
+                </select>
+                <input class="dialCode"
+                       ng-click="ctrlHome.onCountryCodeSelect()"
+                       ng-model="ctrlHome.selectedCountry.dialCode"
+                       type="text"
+                       readonly
+                >
+                <input class="number"
+                       placeholder="Enter Mobile number"
+                       type="number"
+                       ng-keypress="($event.charCode==13)? ctrlHome.open() : return"
+                       ng-model="ctrlHome.target"
+                >
+                <svg class="send" height="24" viewBox="0 0 24 24" width="24" ng-click="ctrlHome.open()">
+                    <path d="M1.101 21.757 23.8 12.028 1.101 2.3l.011 7.912 13.623 1.816-13.623 1.817-.011 7.912z"
+                          fill="currentColor"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="col-6"></div>
+    </div>
+    <div class="row footer-img">
+        <p>Thank you for using this simple web tool. We don't save any of your data in our system. However, we do send your IP address to ip-api.com to find your country so that you don't have to waste your time scrolling down to find your country in the country code field.</p>
+        <img src="public/img/thank.png" class="thank">
+    </div>
+</div>
