@@ -7,6 +7,7 @@ const path = require('path');
 const os = require('os');
 const app = express();
 const ipinfo = require('ipinfo-express')
+app.engine('html', require('ejs').renderFile);
 
 log.info(`Server initializing in ${configs.operational.production ? 'Production' : 'Development'} mode`);
 log.debug(`Hostname: ${os.hostname()}`);
@@ -31,5 +32,5 @@ http.listen(configs.http.httpPort, function () {
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
 app.get('/', function (req, res) {
-    res.render('index.ejs', {country: 'LK'});
+    res.render('index.ejs', {country: req.ipinfo.countryCode});
 });
